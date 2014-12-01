@@ -7,7 +7,7 @@ Code for classification of a molecular species in an ontology from molecular fin
 
 **Methods**
 ----------------------
-First we use structured prediction method developed for network response named SPIN. The input is a set of fingerprint vectors of some chemical compounds {x 1 , . . . , x n }, ∀x i ∈ Rm  and the output is a DAG.  Then we use SVM as a single target classifier. 
+We use two methods in this porject. First we use structured prediction method developed for network response named SPIN. The input is a set of fingerprint vectors of some chemical compounds {x 1 , . . . , x n }, ∀x i ∈ Rm  and the output is a DAG.  Then we use SVM as a single target classifier. 
 
 **Data preparation**
 ------------------------
