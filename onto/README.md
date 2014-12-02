@@ -49,4 +49,8 @@ stored in the third column of the same file.
     
     script to create the target matrix.
 
+* all_ids_sorted 
+
+    three columns of ids in the following order: CHEBI Id, PubChem  substance Id and PubChem compound Id,  for the 1140 metlin compounds sorted according the CHEBi Id. 
+
     
