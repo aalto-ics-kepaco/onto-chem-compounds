@@ -13,8 +13,8 @@ The directory contains the input data used for the classification task and the s
     
 All feature matrices are sorted according the CHEBI Ids stored in the first column of the file all_ids_sorted, i.e.  
 the first row contains the fingerprints for compound with id “799”, the second row contains the features for 
-compound with id “1387” etc. They are retrieved from the database in this order, using the PubChem compound Ids stored 
-in the third column of the same file.
+compound with id “1387” etc. They are retrieved from the database in this order, using the PubChem compound Ids 
+stored in the third column of the same file.
 
 # onto.Y
     1140x2702 target matrix.
