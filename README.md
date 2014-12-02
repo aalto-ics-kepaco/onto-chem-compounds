@@ -3,11 +3,11 @@ onto-chem-compounds
 
 **About**
 --------------------
-Code for classification of a molecular species in an ontology from molecular fingerprints.  Fingerprints are used to represent chemical compounds, and for each of the compounds there exists a ontological classification in form of a directed acyclic graph (DAG). 
+Code for classification of a molecular species in an ontology from molecular fingerprints.  Fingerprints are used to represent chemical compounds, and for each of the compounds there exists an ontological classification in form of a directed acyclic graph (DAG). 
 
 **Methods**
 ----------------------
-We use two methods in this porject. First we use structured prediction method developed for network response named SPIN. The input is a set of fingerprint vectors of some chemical compounds {x 1 , . . . , x n }, ∀x i ∈ Rm  and the output is a DAG.  Then we use SVM as a single target classifier. 
+We use two methods in this project. First we use structured prediction method developed for network response named SPIN. The input is a set of fingerprint vectors of some chemical compounds {x 1 , . . . , x n }, ∀x i ∈ Rm  and the output is a DAG.  Then we use SVM as a single target classifier. 
 
 **Data preparation**
 ------------------------
