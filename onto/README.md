@@ -45,7 +45,7 @@ stored in the third column of the same file.
     
     sorted array of all entities present in the ontology of our interest. 
 
-* create_output.m
+* output_Y.m
     
     script to create the target matrix.
 
