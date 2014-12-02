@@ -10,9 +10,11 @@ The directory contains the input data used for the classification task and the s
     1140x528  input feature matrix, containing babel fingerprint vectors for each input compound.
     
 * onto.pubchem.phix
+    
     1140x881  pubchem fingerprints.
     
 * onto.babPubc.phix 
+    
     1140x1409 pubchem and babel fingerprints.
     
 All feature matrices are sorted according the CHEBI Ids stored in the first column of the file all_ids_sorted, i.e.  
@@ -21,24 +23,30 @@ compound with id “1387” etc. They are retrieved from the database in this or
 stored in the third column of the same file.
 
 * onto.Y
+    
     1140x2702 target matrix.
 
 * onto.Yv
+    
     1140x1 array, with focal nodes for each molecule (compound).
     
 * onto.e
+    
     4421x3 edges of the output graph, where nodes are labeled with the their position in the sorted list of all 
     nodes in the graph. They can be mapped back to the original id by finding the element in the given position 
     from the array stored in sorted_output_metlin file.
 
 * dlm_output_metlin 
+    
     ASCII-delimited file containing on each row the compounds of interest, and on the columns the subset of 
     the classification (entities) that the compound belongs to.
     
 * sorted_output_metlin
+    
     sorted array of all entities present in the ontology of our interest. 
 
 * create_output.m
+    
     script to create the target matrix.
 
     
