@@ -5,10 +5,10 @@ The directory contains the input data used for the classification task and the s
 **Contents**
 ----------------
 
-*onto.babel.phix
+* onto.babel.phix
     1140x528  input feature matrix, containing babel fingerprint vectors for each input compound.
     
-*onto.pubchem.phix
+* onto.pubchem.phix
     1140x881  pubchem fingerprints.
     
 *onto.babPubc.phix 
