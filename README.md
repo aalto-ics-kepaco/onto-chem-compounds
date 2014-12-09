@@ -23,6 +23,10 @@ fingerprints (FP3, FP4 and MACCS) all together 528 bits and [PubChem](onto/onto.
 **Contents**
 -------------
 
+* README.md 
+
+    This file  
+
 * classification 
 
     A directory containing the matlab scripts for running SPIN and SVM. 
