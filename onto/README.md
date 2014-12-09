@@ -5,6 +5,10 @@ The directory contains the input data used for the classification task and the s
 **Contents**
 ----------------
 
+* README.md 
+
+    This file 
+
 * onto.babel.phix
 
     1140x528  input feature matrix, containing babel fingerprint vectors for each input compound.
@@ -17,7 +21,7 @@ The directory contains the input data used for the classification task and the s
     
     1140x1409 pubchem and babel fingerprints.
     
-All feature matrices are sorted according the CHEBI Ids stored in the first column of the file all_ids_sorted, i.e.  
+All feature matrices are sorted according the CHEBI Ids stored in the first column of the file [all_ids_sorted](all_ids_sorted), i.e.  
 the first row contains the fingerprints for compound with id “799”, the second row contains the features for 
 compound with id “1387” etc. They are retrieved from the database in this order, using the PubChem compound Ids 
 stored in the third column of the same file.
@@ -32,9 +36,9 @@ stored in the third column of the same file.
     
 * onto.e
     
-    4421x3 edges of the output graph, where nodes are labeled with the their position in the sorted list of all 
+    4421x3 edges of the output graph, where nodes are labeled with their position in the sorted list of all 
     nodes in the graph. They can be mapped back to the original id by finding the element in the given position 
-    from the array stored in sorted_output_metlin file.
+    from the array stored in [sorted_output_metlin](sorted_output_metlin) file.
 
 * dlm_output_metlin 
     
