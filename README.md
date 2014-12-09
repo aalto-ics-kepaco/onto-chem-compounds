@@ -18,7 +18,7 @@ To get the input fingerprint vectors, several mappings are needed: first PubChem
 Next, PubChem compound Id can be retrieved from the PubChem substance Id by using the [service](https://pubchem.ncbi.nlm.nih.gov/idexchange/idexchange.cgi) provided by PubChem. The file  [all_ids_sorted](onto/all_ids_sorted) contains all the ids; CHEBI Id, PubChem  substance Id and PubChem compound Id.
 
 From here, by using the PubChem compound Ids we can retrieve the fingerprint vectors, there are [openbabel](onto/onto.babel.phix) 
-fingerprints (FP3, FP4 and MACCS) all together 528 bits and PubChem fingerprints (998 bits). 
+fingerprints (FP3, FP4 and MACCS) all together 528 bits and [PubChem](onto/onto.pubchem.phix) fingerprints (998 bits). 
 
 **Contents**
 -------------
