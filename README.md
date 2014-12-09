@@ -11,7 +11,7 @@ We use two methods in this project. First we use structured prediction method de
 
 **Data preparation**
 ------------------------
-The ontology data are downloaded from [ChEBI](http://www.ebi.ac.uk/chebi/aboutChebiForward.do). We have the fingerprints for all the compounds in PubChem. We use 1141 compounds from the [metlin ontology](metlin_onto/) for which we already have the outputs (DAGs). 
+The ontology data are downloaded from [ChEBI](http://www.ebi.ac.uk/chebi/aboutChebiForward.do). We have the fingerprints for all the compounds in PubChem. We use 1141 compounds from the [metlin ontology](metlin_onto/) (ask author for complete directory) for which we already have the outputs (DAGs). 
 
 To get the input fingerprint vectors, several mappings are needed: first PubChem substance Id is retrieved for each CHEBI Id from the meta-info file, [CHEBI_complete.sdf](http://www.ebi.ac.uk/chebi/downloadsForward.do).  For the compound with id “ 4194” I couldn't find links to Pubchem substance Id, neither from the meta-info file nor from the CHEBI database, therefore I use 1140 compounds for the classification task. 
 
