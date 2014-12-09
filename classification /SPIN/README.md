@@ -6,7 +6,7 @@ The method is developed by [Hongyu SU](https://github.com/hongyusu) and in this 
 The directory contains the code for running the method locally and on triton, the computing cluster at Aalto University. 
 
 * spin_gdy
-* 
+
 All files in the directory belong to the author of SPIN. 
 
 The directory contains the scripts to run the GREEDY labeling version of SPIN. Script onto_greedy_labeling has been 
