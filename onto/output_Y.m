@@ -3,7 +3,7 @@
 %comp_ids contains all 2702 compounds sorted accroding their ids.
 %comp_mat is a matrix with rows corresponidng to the compounds of interest(leaf node) and columns
 %corresponding to the compounds (nodes) present in the ontology for the given leaf node.  
-function  target_mat=output_Y() 
+function target_mat = output_Y() 
 
 target_mat=zeros(1140,2702);
 
