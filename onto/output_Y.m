@@ -1,9 +1,6 @@
 %%
 % script to create the target matrix for the ontologies.
 
-%comp_ids contains all 2702 compounds sorted accroding their ids.
-%comp_mat is a matrix with rows corresponidng to the compounds of interest(leaf node) and columns
-%corresponding to the compounds (nodes) present in the ontology for the given leaf node.  
 function target_mat = output_Y() 
 
 target_mat=zeros(1140,2702);
@@ -12,7 +9,7 @@ target_mat=zeros(1140,2702);
 comp_mat=dlmread('/home/milievsk/Documents/scripts/dlm_output_metlin');
 comp_ids=dlmread('/home/milievsk/Documents/scripts/sorted_output_metlin');
 
-%sort the comp_mat according the first column corresponding to the leaf id
+%sort the comp_mat according the first column corresponding to the compound id
 [s,ind]=sort(comp_mat(:,1));
 sorted_comp=comp_mat(ind,:);
 
