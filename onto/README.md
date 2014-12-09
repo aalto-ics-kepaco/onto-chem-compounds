@@ -36,9 +36,9 @@ stored in the third column of the same file.
     
 * onto.e
     
-    4421x3 edges of the output graph, where nodes are labeled with the their position in the sorted list of all 
+    4421x3 edges of the output graph, where nodes are labeled with their position in the sorted list of all 
     nodes in the graph. They can be mapped back to the original id by finding the element in the given position 
-    from the array stored in sorted_output_metlin file.
+    from the array stored in [sorted_output_metlin](sorted_output_metlin) file.
 
 * dlm_output_metlin 
     
