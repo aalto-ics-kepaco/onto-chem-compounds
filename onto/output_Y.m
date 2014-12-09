@@ -1,3 +1,4 @@
+%%
 % script to create the target matrix for the ontologies.
 
 %comp_ids contains all 2702 compounds sorted accroding their ids.
