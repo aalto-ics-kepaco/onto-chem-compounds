@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#change the path, the file is in the onto directory
+sorted_file=/home/milievsk/Documents/scripts/sorted_output_metlin
+
+#the path to the dot files 
+FILES=/home/milievsk/Documents/MATLAB/final_workNovember/all_edges_mol_actOrderT/*
+#temp files, can be in the same folder 
+temp_file=/home/milievsk/Documents/MATLAB/final_workNovember/temp
+tmp=/home/milievsk/Documents/MATLAB/final_workNovember/tmp
+temp1=/home/milievsk/Documents/MATLAB/final_workNovember/temp1
+sorted_file=/home/milievsk/Documents/scripts/sorted_output_metlin
+echo "$(awk '{print $1, NR }' $sorted_file)" >$temp1 
+
+for f in $FILES
+do
+echo "strict digraph{" > $temp_file 
+
+echo "$(awk 'NR==FNR{h[$2]=$1;next} { print h[$1]" "h[$2]" "$3" "$4 }' $temp1 $f)">$tmp
+
+#adding the activation order 
+echo "$(head -1 $tmp | awk '{print $2 " [label=\"idn:"$2",act:"$4"\"] " "\n" $1" -> "$2 }')" >> $temp_file
+
+#convert the label into the original chebi id
+b="$(awk 'NR==1{print $2 }' $tmp)"
+#for the activation order
+acto="$(awk 'NR==1{print $4 }' $tmp)"
+
+echo "$( awk -v b=$b act=$acto' NR>1{if (b!=$2) print $2 " [label=\"idn:"$2",act:"$4"\"]"} NR>1{ c=$1;  a=$2; getline; d=$1; b=$2; acto=$4;  if (a!=b)   print c " -> " a "\n " b " [label=\"idn:"b",act:"acto"\"]"  "\n" d" -> "b;  else print c " ->" a "\n" d" -> "b; }' $tmp)" >>$temp_file
+
+echo "}" >>$temp_file
+cp $temp_file $f
+output_file=$( echo $f | grep -o '[0-9]*')
+dot -Tpdf $f -o $output_file.pdf
+
+done

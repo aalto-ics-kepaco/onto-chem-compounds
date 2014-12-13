@@ -1,0 +1,102 @@
+function  activation_order()
+
+
+%Ypred=dlmread('/home/milievsk/Documents/SPIN/code/results/Ypred_onto_100_0.8_3_0.7_exp_SPINgreedy.mat');
+Ypred=load('/home/milievsk/Documents/MATLAB/final_workNovember/Ypred_onto_100_0.8_3_0.7_exp_SPINgreedy.mat');
+%Ypred=YpredVal;
+Ypred=Ypred.YpredVal;
+Ypred=Ypred(:,2:end);
+% all edges in the ontologies
+all_edges_unique=dlmread('/home/milievsk/Documents/MATLAB/onto/onto.e');
+
+
+
+parfor i=1:size(Ypred,1)
+    
+     
+%     activ_order=Ypred(i,find(Ypred(i,:))); 
+%     
+%     %find the positions of the active nodes in the component of interest
+%     [order,pos]=sort(activ_order);
+%     
+%     %nodes in order of activation maybe wiht repetitions
+%     nodes=[active(pos)' order']; 
+%     
+%     
+%     %edges according activation order
+%     edges_act=zeros(size(nodes,1),2);
+%     for j=1:size(nodes,1)-1
+%         
+%         if (nodes(j,2)+1==nodes(j+1,2))
+%             edges_act(j,:)=[nodes(j,1) nodes(j+1,1)];
+%             
+%        
+%         
+%         else
+%             
+%             break;
+%         
+%         end
+%             
+%     end
+%     
+%     edges_act(~any(edges_act,2),:)=[];
+%     name=int2str(i);
+%     dlmwrite(strcat('/home/milievsk/Documents/MATLAB/final work- November,2014/edges',name),edges_act,' ');
+%     
+   
+    row_Y=Ypred(i,:);
+    active=find(row_Y);
+    %edge and activation number
+    edges_molecule=zeros(size(find(row_Y),2),4);
+    k=1;
+    for j=1:size(all_edges_unique,1)
+        
+        row=all_edges_unique(j,1:2);
+        edge=size(intersect(find(row_Y),row(1,1:2)),2);
+        if (edge==2)
+            
+            edges_molecule(k,:)=[row row_Y(1,row(1,1)) row_Y(1,row(1,2))];
+            k=k+1;
+        
+        end
+        
+        
+        % for the false positive nodes with no (links to other positive
+        % nodes) - this condition is not satisfied
+%         if (edge==1)
+%  
+%                  node=intersect(find(row_Y),row(1,1:2));
+%                  % root node labeled as   11111     
+%                  edges_molecule(k,:)=[11111 node 1 row_Y(1,intersect(find(row_Y),row(1,1:2)))];
+%                  k=k+1;
+%         end
+        
+    end
+    
+    
+%     for j=1:size(active,2)
+%     
+%         if (size(intersect(active(j),edges_molecule(:,2)),1)==0)
+%             
+%             edges_molecule(k,:)=[11111 active(j) 1 row_Y(active(j))];
+%             k=k+1;
+%         
+%         end
+%     
+%     end
+    
+    
+
+     edges_molecule(~any(edges_molecule,2),:)=[];
+     edges_molecule=unique(edges_molecule, 'rows');
+     name=int2str(i);
+     dlmwrite(strcat('/home/milievsk/Documents/MATLAB/final_workNovember/all_edges_mol_actOrderT/molecule',name),edges_molecule,' ');
+   
+    
+
+
+
+
+
+end

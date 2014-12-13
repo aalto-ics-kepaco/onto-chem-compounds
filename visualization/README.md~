@@ -1,0 +1,7 @@
+**ABOUT**
+-------------
+This directory contains the code for visualization of the predictions. In order to be able to create a visual representation of the predicted graphs follow the procedure:
+
+First run the script .m, to generate a file that lists all the edges that were predicted for each of the chemical compounds. The script first reads the file . .. to list all the edges that exist for each compund, such that the first two columns are the edge ids and the thrid column is the compound id. Next, the script adds ones in the forth column only for the edges that were predicted and addditinally adds the actiovation order in the 5th and 6th column.
+
+Second, 
