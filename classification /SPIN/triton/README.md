@@ -14,5 +14,7 @@ Bash script to configure batch jobs, to perform a grid search for paramter selec
 In order to run the script create the following folders in the same directory as the scrip:
 
 jobs_output/ - directory to store the separate sbatch files and outpt files;
+
 tmp/ - to temporary store the results from SPINgreedy.m;
+
 results/ - to store the results from run_SPINgreedy.m
