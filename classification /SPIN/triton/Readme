@@ -1,21 +1,23 @@
+**ABOUT**
+--------------
+Script to run the code for SPIN on triton, and folders required to store the results are contained in this directory.
 
-# bashrun_SPINgreedy.py
-#       script that enables to run experiments parallelly on cluster
+**CONTENTS**
+---------------
 
-# global_greedy_labeling.m
-#       greedy inference in negative feed mode
+* onto_code
 
-# Readme
-#       this file
+SPIN code for directed network inference. The code in [spin_gdy](../spin_gdy) directory should be used for the 
+undirected inference. 
 
-# run_SPINgreedy.m
-#       matlab wrapper function
+* grid_params
 
-# SPINgreedy.m
-#       SPIN matlab function
-
-
-# test run
-#       run_SPINgreedy('100','0.8','3','0.5','exp','2000_15_100')
-
-
+Bash script to configure batch jobs, to perform a grid search for paramter selection on triton.  
+In order to run the script create the following folders in the same directory as the scrip:
+ 
+ jobs_output/ - directory to store the separate sbatch files and outpt files;
+ tmp/ - to temporary store the results from SPINgreedy.m;
+ results/  - to store the results from run_SPINgreedy.m
+ 
+ 
+ 
