@@ -13,6 +13,4 @@ for matlab is used to perform the classification tasks.
 
   5 fold cross validation for training and testing, with cost parameter 100. 
   
-* svm_linear_results.mat 
-
   
