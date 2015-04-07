@@ -1,7 +1,7 @@
 onto-chem-compounds
 ===================
 
-**About**
+*About**
 --------------------
 Code for classification of a molecular species in an ontology from molecular fingerprints.  Fingerprints are used to represent chemical compounds, and for each of the compounds there exists an ontological classification in form of a directed acyclic graph (DAG). 
 
