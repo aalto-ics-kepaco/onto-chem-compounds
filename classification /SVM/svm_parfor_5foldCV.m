@@ -7,7 +7,7 @@ function svm_parfor_5foldCV()
 Y=dlmread('/home/milievsk/Documents/MATLAB/onto/onto.Y');
 %Y=dlmread('../onto/onto.babel.phix');
 %chebi_ids is a sorted array of the chebi ids in ascending order
-chebi_ids=dlmread('/home/milievsk/Documents/scripts/chebi_ordered');
+%chebi_ids=dlmread('/home/milievsk/Documents/scripts/chebi_ordered');
 %chebi_ids=dlmread('../onto/chebi_ordered');
 
 
